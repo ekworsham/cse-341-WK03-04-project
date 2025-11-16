@@ -3,10 +3,11 @@ const router = require('express').Router();
 router.use('/', require('./swagger'));
 
 router.get('/', (req, res) => {
-  //#swagger.tags-['Helllo World']
+  //#swagger.tags-['Hello World']
   res.send('Hello World');
 });
 
-router.use('/collectionController', require('./collectionController'));
+router.use('/trees', require('./trees'));
+router.use('/shrubs', require('./shrubs'));
 
 module.exports = router;

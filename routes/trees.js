@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const createController = require('../controllers/collectionController');
-const trees = createController('trees');
+const treesController = require('../controllers/trees');
 
-router.get('/', trees.getAll);
-router.get('/:id', trees.getSingle);
+router.get('/', treesController.getAll);
+router.get('/:id', treesController.getSingle);
 
 module.exports = router;
