@@ -2,7 +2,7 @@ const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
 const getAll = async (req, res) => {
-  //#swagger.tags-['trees']
+  //#swagger.tags = ['Trees']
   const result = await mongodb.getDatabase().db().collection('trees').find();
   result.toArray().then((trees) => {
     res.setHeader('Content-Type', 'application/json');
@@ -11,7 +11,7 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
-  //#swagger.tags-['trees']
+  //#swagger.tags = ['Trees']
   const treesId = new ObjectId(req.params.id);
   const result = await mongodb.getDatabase().db().collection('trees').find({ _id: treesId });
   result.toArray().then((trees) => {
@@ -21,7 +21,7 @@ const getSingle = async (req, res) => {
 };
 
 const createTrees = async (req, res) => {
-  //#swagger.tags-['Trees']
+  //#swagger.tags = ['Trees']
   const trees = {
     plantName: req.body.plantName,
     family: req.body.family,
@@ -42,7 +42,7 @@ const createTrees = async (req, res) => {
 };
 
 const updateTrees= async (req, res) => {
-  //#swagger.tags-['trees']
+  //#swagger.tags = ['Trees']
   const treesId = new ObjectId(req.params.id);
   const trees = {
     plantName: req.body.plantName,
@@ -68,7 +68,7 @@ const updateTrees= async (req, res) => {
 };
 
 const deleteTrees = async (req, res) => {
-  //#swagger.tags-['Trees']
+  //#swagger.tags = ['Trees']
   const treesId = new ObjectId(req.params.id);
   const response = await mongodb.getDatabase().db().collection('trees').deleteOne({ _id: treesId });
   if (response.deletedCount > 0) {
