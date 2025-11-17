@@ -5,7 +5,7 @@ const doc = {
     title: 'Plants API',
     description: 'Plants API'
   },
-  host: 'localhhttps://cse-341-wk03-04-project.onrender.com',
+  host: 'cse-341-wk03-04-project.onrender.com',
   schemes: ['https', 'http']
 };
 
