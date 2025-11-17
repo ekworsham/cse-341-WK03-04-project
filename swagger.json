@@ -7,7 +7,10 @@
   },
   "host": "localhost:3001",
   "basePath": "/",
-  "schemes": ["https", "http"],
+  "schemes": [
+    "https",
+    "http"
+  ],
   "paths": {
     "/": {
       "get": {
@@ -16,6 +19,340 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/trees/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plantName": {
+                  "example": "any"
+                },
+                "family": {
+                  "example": "any"
+                },
+                "genus": {
+                  "example": "any"
+                },
+                "species": {
+                  "example": "any"
+                },
+                "cultivar": {
+                  "example": "any"
+                },
+                "hardinessZone": {
+                  "example": "any"
+                },
+                "flower": {
+                  "example": "any"
+                },
+                "leaf": {
+                  "example": "any"
+                },
+                "growthHabit": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/trees/{id}": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plantName": {
+                  "example": "any"
+                },
+                "family": {
+                  "example": "any"
+                },
+                "genus": {
+                  "example": "any"
+                },
+                "species": {
+                  "example": "any"
+                },
+                "cultivar": {
+                  "example": "any"
+                },
+                "hardinessZone": {
+                  "example": "any"
+                },
+                "flower": {
+                  "example": "any"
+                },
+                "leaf": {
+                  "example": "any"
+                },
+                "growthHabit": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/shrubs/": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plantName": {
+                  "example": "any"
+                },
+                "family": {
+                  "example": "any"
+                },
+                "genus": {
+                  "example": "any"
+                },
+                "species": {
+                  "example": "any"
+                },
+                "cultivar": {
+                  "example": "any"
+                },
+                "hardinessZone": {
+                  "example": "any"
+                },
+                "flower": {
+                  "example": "any"
+                },
+                "leaf": {
+                  "example": "any"
+                },
+                "growthHabit": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/shrubs/{id}": {
+      "get": {
+        "tags": [],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "plantName": {
+                  "example": "any"
+                },
+                "family": {
+                  "example": "any"
+                },
+                "genus": {
+                  "example": "any"
+                },
+                "species": {
+                  "example": "any"
+                },
+                "cultivar": {
+                  "example": "any"
+                },
+                "hardinessZone": {
+                  "example": "any"
+                },
+                "flower": {
+                  "example": "any"
+                },
+                "leaf": {
+                  "example": "any"
+                },
+                "growthHabit": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       }
