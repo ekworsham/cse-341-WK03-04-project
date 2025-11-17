@@ -198,7 +198,7 @@
     },
     "/shrubs/": {
       "get": {
-        "tags": [],
+        "tags": [ "All Shrubs" ],
         "description": "",
         "produces": [
           "application/json"
@@ -210,7 +210,7 @@
         }
       },
       "post": {
-        "tags": [],
+        "tags": [ "Create Shrub" ],
         "description": "",
         "parameters": [
           {
@@ -262,7 +262,7 @@
     },
     "/shrubs/{id}": {
       "get": {
-        "tags": [],
+        "tags": [ "Shrubs By ID" ],
         "description": "",
         "produces": [
           "application/json"
@@ -282,7 +282,7 @@
         }
       },
       "put": {
-        "tags": [],
+        "tags": [ "Create Shrubs" ],
         "description": "",
         "parameters": [
           {
@@ -338,7 +338,7 @@
         }
       },
       "delete": {
-        "tags": [],
+        "tags": [ "Delete Shrub" ],
         "description": "",
         "parameters": [
           {
