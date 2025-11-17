@@ -6,7 +6,7 @@ const doc = {
     description: 'Plants API'
   },
   host: 'localhost:3000',
-  schemes: ['http']
+  schemes: ['https', 'http']
 };
 
 const outputFile = '.swagger.json';
