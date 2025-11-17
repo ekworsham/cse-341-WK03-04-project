@@ -14,7 +14,7 @@
   "paths": {
     "/": {
       "get": {
-        "tags": [],
+        "tags": [ "Hello Keith" ],
         "description": "",
         "responses": {
           "200": {
@@ -35,7 +35,7 @@
     },
     "/trees/": {
       "get": {
-        "tags": [],
+        "tags": [ "Trees" ],
         "description": "",
         "produces": [
           "application/json"
@@ -99,7 +99,7 @@
     },
     "/trees/{id}": {
       "get": {
-        "tags": [],
+        "tags": [ "Trees ID "],
         "description": "",
         "produces": [
           "application/json"
