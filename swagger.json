@@ -282,7 +282,7 @@
         }
       },
       "put": {
-        "tags": [ "Create Shrubs" ],
+        "tags": [ "Update Shrubs" ],
         "description": "",
         "parameters": [
           {
