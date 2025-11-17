@@ -25,6 +25,7 @@
     },
     "/api-docs": {
       "get": {
+        "tags": [ "Code" ],
         "description": "",
         "responses": {
           "default": {
@@ -35,7 +36,7 @@
     },
     "/trees/": {
       "get": {
-        "tags": [ "Trees" ],
+        "tags": [ "All Trees" ],
         "description": "",
         "produces": [
           "application/json"
@@ -47,7 +48,7 @@
         }
       },
       "post": {
-        "tags": [],
+        "tags": [ "Create Trees" ],
         "description": "",
         "parameters": [
           {
@@ -99,7 +100,7 @@
     },
     "/trees/{id}": {
       "get": {
-        "tags": [ "Trees ID "],
+        "tags": [ "Trees By ID "],
         "description": "",
         "produces": [
           "application/json"
@@ -119,7 +120,7 @@
         }
       },
       "put": {
-        "tags": [],
+        "tags": [ "Update Tree"],
         "description": "",
         "parameters": [
           {
@@ -175,7 +176,7 @@
         }
       },
       "delete": {
-        "tags": [],
+        "tags": [ "Delete Tree" ],
         "description": "",
         "parameters": [
           {
