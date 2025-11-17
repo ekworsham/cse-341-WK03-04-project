@@ -1,11 +1,9 @@
-console.log("Hello Keith!");
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongodb = require('./data/database');
 const app = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
@@ -32,4 +30,6 @@ mongodb.initDb((err) => {
       console.log(`Database is listening and node running on port ${port}`);
     });
   }
+
+  console.log('Connected DB name:', require('./data/database').getDatabase().databaseName);
 });
