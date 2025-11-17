@@ -6,10 +6,10 @@ router.get('/', treesController.getAll);
 
 router.get('/:id', treesController.getSingle);
 
-router.post('/', treessController.createTrees);
+router.post('/', treesController.createTrees);
 
-router.put('/:id', treessController.updateTrees);
+router.put('/:id', treesController.updateTrees);
 
-router.delete('/:id', treessController.deleteTrees);
+router.delete('/:id', treesController.deleteTrees);
 
 module.exports = router;

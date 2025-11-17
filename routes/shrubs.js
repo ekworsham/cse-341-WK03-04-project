@@ -6,11 +6,11 @@ router.get('/', shrubsController.getAll);
 
 router.get('/:id', shrubsController.getSingle);
 
-router.post('/', shubssController.createShubs);
+router.post('/', shrubsController.createShrubs);
 
-router.put('/:id', shubssController.updateShubs);
+router.put('/:id', shrubsController.updateShrubs);
 
-router.delete('/:id', shubssController.deleteShubs);
+router.delete('/:id', shrubsController.deleteShrubs);
 
 
 module.exports = router;
