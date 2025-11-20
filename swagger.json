@@ -58,31 +58,40 @@
               "type": "object",
               "properties": {
                 "plantName": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "family": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "genus": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "species": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "cultivar": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "hardinessZone": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "flower": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "leaf": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "growthHabit": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 }
               }
             }
@@ -136,31 +145,40 @@
               "type": "object",
               "properties": {
                 "plantName": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "family": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "genus": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "species": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "cultivar": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "hardinessZone": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "flower": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "leaf": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "growthHabit": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 }
               }
             }
@@ -220,31 +238,40 @@
               "type": "object",
               "properties": {
                 "plantName": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "family": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "genus": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "species": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "cultivar": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "hardinessZone": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "flower": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "leaf": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "growthHabit": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 }
               }
             }
@@ -298,31 +325,40 @@
               "type": "object",
               "properties": {
                 "plantName": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "family": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "genus": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "species": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "cultivar": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "hardinessZone": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "flower": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "leaf": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 },
                 "growthHabit": {
-                  "example": "any"
+                  "type": "string",
+                  "example": ""
                 }
               }
             }
