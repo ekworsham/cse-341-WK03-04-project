@@ -7,48 +7,31 @@
   },
   "host": "cse-341-wk03-04-project.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https",
-    "http"
-  ],
+  "schemes": ["https","http"],
   "paths": {
     "/": {
       "get": {
-        "tags": [ "Hello Keith" ],
+        "tags": ["Hello Keith"],
         "description": "",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       }
     },
     "/api-docs": {
       "get": {
-        "tags": [ "Code" ],
+        "tags": ["Code"],
         "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
+        "responses": { "default": { "description": "" } }
       }
     },
     "/trees/": {
       "get": {
-        "tags": [ "All Trees" ],
+        "tags": ["All Trees"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "produces": ["application/json"],
+        "responses": { "200": { "description": "OK" } }
       },
       "post": {
-        "tags": [ "Create Trees" ],
+        "tags": ["Create Trees"],
         "description": "",
         "parameters": [
           {
@@ -57,87 +40,40 @@
             "schema": {
               "type": "object",
               "properties": {
-                "plantName": {
-                  "type": "string",
-                  "example": ""
-                },
-                "family": {
-                  "type": "string",
-                  "example": ""
-                },
-                "genus": {
-                  "type": "string",
-                  "example": ""
-                },
-                "species": {
-                  "type": "string",
-                  "example": ""
-                },
-                "cultivar": {
-                  "type": "string",
-                  "example": ""
-                },
-                "hardinessZone": {
-                  "type": "string",
-                  "example": ""
-                },
-                "flower": {
-                  "type": "string",
-                  "example": ""
-                },
-                "leaf": {
-                  "type": "string",
-                  "example": ""
-                },
-                "growthHabit": {
-                  "type": "string",
-                  "example": ""
-                }
+                "plantName": { "type": "string" },
+                "family": { "type": "string" },
+                "genus": { "type": "string" },
+                "species": { "type": "string" },
+                "cultivar": { "type": "string" },
+                "hardinessZone": { "type": "string" },
+                "flower": { "type": "string" },
+                "leaf": { "type": "string" },
+                "growthHabit": { "type": "string" }
               }
             }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
         }
       }
     },
     "/trees/{id}": {
       "get": {
-        "tags": [ "Trees By ID "],
+        "tags": ["Trees By ID"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
+          { "name": "id", "in": "path", "required": true, "type": "string" }
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       },
       "put": {
-        "tags": [ "Update Tree"],
+        "tags": ["Update Tree"],
         "description": "",
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
+          { "name": "id", "in": "path", "required": true, "type": "string" },
           {
             "name": "body",
             "in": "body",
@@ -145,91 +81,45 @@
             "schema": {
               "type": "object",
               "properties": {
-                "plantName": {
-                  "type": "string",
-                  "example": ""
-                },
-                "family": {
-                  "type": "string",
-                  "example": ""
-                },
-                "genus": {
-                  "type": "string",
-                  "example": ""
-                },
-                "species": {
-                  "type": "string",
-                  "example": ""
-                },
-                "cultivar": {
-                  "type": "string",
-                  "example": ""
-                },
-                "hardinessZone": {
-                  "type": "string",
-                  "example": ""
-                },
-                "flower": {
-                  "type": "string",
-                  "example": ""
-                },
-                "leaf": {
-                  "type": "string",
-                  "example": ""
-                },
-                "growthHabit": {
-                  "type": "string",
-                  "example": ""
-                }
+                "plantName": { "type": "string" },
+                "family": { "type": "string" },
+                "genus": { "type": "string" },
+                "species": { "type": "string" },
+                "cultivar": { "type": "string" },
+                "hardinessZone": { "type": "string" },
+                "flower": { "type": "string" },
+                "leaf": { "type": "string" },
+                "growthHabit": { "type": "string" }
               }
             }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
         }
       },
       "delete": {
-        "tags": [ "Delete Tree" ],
+        "tags": ["Delete Tree"],
         "description": "",
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
+          { "name": "id", "in": "path", "required": true, "type": "string" }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
         }
       }
     },
     "/shrubs/": {
       "get": {
-        "tags": [ "All Shrubs" ],
+        "tags": ["All Shrubs"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "produces": ["application/json"],
+        "responses": { "200": { "description": "OK" } }
       },
       "post": {
-        "tags": [ "Create Shrub" ],
+        "tags": ["Create Shrub"],
         "description": "",
         "parameters": [
           {
@@ -238,87 +128,40 @@
             "schema": {
               "type": "object",
               "properties": {
-                "plantName": {
-                  "type": "string",
-                  "example": ""
-                },
-                "family": {
-                  "type": "string",
-                  "example": ""
-                },
-                "genus": {
-                  "type": "string",
-                  "example": ""
-                },
-                "species": {
-                  "type": "string",
-                  "example": ""
-                },
-                "cultivar": {
-                  "type": "string",
-                  "example": ""
-                },
-                "hardinessZone": {
-                  "type": "string",
-                  "example": ""
-                },
-                "flower": {
-                  "type": "string",
-                  "example": ""
-                },
-                "leaf": {
-                  "type": "string",
-                  "example": ""
-                },
-                "growthHabit": {
-                  "type": "string",
-                  "example": ""
-                }
+                "plantName": { "type": "string" },
+                "family": { "type": "string" },
+                "genus": { "type": "string" },
+                "species": { "type": "string" },
+                "cultivar": { "type": "string" },
+                "hardinessZone": { "type": "string" },
+                "flower": { "type": "string" },
+                "leaf": { "type": "string" },
+                "growthHabit": { "type": "string" }
               }
             }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
         }
       }
     },
     "/shrubs/{id}": {
       "get": {
-        "tags": [ "Shrubs By ID" ],
+        "tags": ["Shrubs By ID"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
+          { "name": "id", "in": "path", "required": true, "type": "string" }
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
+        "responses": { "200": { "description": "OK" } }
       },
       "put": {
-        "tags": [ "Update Shrubs" ],
+        "tags": ["Update Shrubs"],
         "description": "",
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          },
+          { "name": "id", "in": "path", "required": true, "type": "string" },
           {
             "name": "body",
             "in": "body",
@@ -326,73 +169,33 @@
             "schema": {
               "type": "object",
               "properties": {
-                "plantName": {
-                  "type": "string",
-                  "example": ""
-                },
-                "family": {
-                  "type": "string",
-                  "example": ""
-                },
-                "genus": {
-                  "type": "string",
-                  "example": ""
-                },
-                "species": {
-                  "type": "string",
-                  "example": ""
-                },
-                "cultivar": {
-                  "type": "string",
-                  "example": ""
-                },
-                "hardinessZone": {
-                  "type": "string",
-                  "example": ""
-                },
-                "flower": {
-                  "type": "string",
-                  "example": ""
-                },
-                "leaf": {
-                  "type": "string",
-                  "example": ""
-                },
-                "growthHabit": {
-                  "type": "string",
-                  "example": ""
-                }
+                "plantName": { "type": "string" },
+                "family": { "type": "string" },
+                "genus": { "type": "string" },
+                "species": { "type": "string" },
+                "cultivar": { "type": "string" },
+                "hardinessZone": { "type": "string" },
+                "flower": { "type": "string" },
+                "leaf": { "type": "string" },
+                "growthHabit": { "type": "string" }
               }
             }
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
         }
       },
       "delete": {
-        "tags": [ "Delete Shrub" ],
+        "tags": ["Delete Shrub"],
         "description": "",
         "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
+          { "name": "id", "in": "path", "required": true, "type": "string" }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
         }
       }
     }

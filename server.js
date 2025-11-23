@@ -6,6 +6,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+// Serve static helper pages from /public
+app.use(express.static('public'));
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader(
@@ -30,6 +32,10 @@ mongodb.initDb((err) => {
       console.log(`Database is listening and node running on port ${port}`);
     });
   }
-
-  console.log('Connected DB name:', require('./data/database').getDatabase().databaseName);
+  try {
+    // getDatabase() returns the MongoClient; call .db() to access the active DB name
+    console.log('Connected DB name:', mongodb.getDatabase().db().databaseName);
+  } catch (e) {
+    console.log('Connected to MongoDB client');
+  }
 });
