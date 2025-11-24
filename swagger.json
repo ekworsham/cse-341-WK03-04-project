@@ -5,6 +5,7 @@
     "description": "Plants-R-Us",
     "version": "1.0.0"
   },
+
   "host": "cse-341-wk03-04-project.onrender.com",
   "basePath": "/",
   "schemes": ["https","http"],

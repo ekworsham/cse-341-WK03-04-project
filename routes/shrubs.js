@@ -1,16 +1,12 @@
-const express = require('express');
-const router = express.Router();
-const shrubsController = require('../controllers/shrubs');
+//const express = require('express');
+const router = require("express").Router();
+const shrubsController = require("../controllers/shrubs");
+const { isAuthenticated } = require("../middleware/authenticate");
 
-router.get('/', shrubsController.getAll);
-
-router.get('/:id', shrubsController.getSingle);
-
-router.post('/', shrubsController.createShrubs);
-
-router.put('/:id', shrubsController.updateShrubs);
-
-router.delete('/:id', shrubsController.deleteShrubs);
-
+router.get("/", shrubsController.getAll);
+router.get("/:id", shrubsController.getSingle);
+router.post("/", isAuthenticated, shrubsController.createShrubs);
+router.put("/:id", isAuthenticated, shrubsController.updateShrubs);
+router.delete("/:id", isAuthenticated, shrubsController.deleteShrubs);
 
 module.exports = router;
