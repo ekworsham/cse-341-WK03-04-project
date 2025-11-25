@@ -1,3 +1,4 @@
+const { Code } = require('mongodb');
 const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
@@ -128,24 +129,66 @@ const updateTrees= async (req, res) => {
   }
 };
 
+// **************************
+// new Code
+// ***************************
+
 const deleteTrees = async (req, res) => {
   //#swagger.tags = ['Trees']
   try {
+    // Validate ObjectId format
     if (!ObjectId.isValid(req.params.id)) {
       return res.status(400).json({ error: 'Invalid ID provided.' });
     }
+
     const treesId = new ObjectId(req.params.id);
     const response = await mongodb.getDatabase().db().collection('trees').deleteOne({ _id: treesId });
-    if (response.deletedCount > 0) {
-      res.status(204).send();
-    } else {
-      res.status(500).json(response.error || 'Some error occurred while deleting the trees.');
+
+    // If the delete operation wasn't acknowledged by the server, treat it as a server error
+    if (!response || response.acknowledged === false) {
+      console.error('Delete not acknowledged:', response);
+      return res.status(500).json({ error: 'Database did not acknowledge delete request.' });
     }
+
+    // No document matched the id => treat as "not valid" input (400) per your requirement.
+    if (response.deletedCount === 0) {
+      return res.status(400).json({ error: 'No document found with the provided ID.' });
+    }
+
+    // Successful deletion
+    return res.status(204).send();
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: err.message || 'Failed to delete tree.' });
+    return res.status(500).json({ error: err.message || 'Failed to delete tree.' });
   }
 };
+
+
+
+
+
+
+
+
+
+// const deleteTrees = async (req, res) => {
+//   //#swagger.tags = ['Trees']
+//   try {
+//     if (!ObjectId.isValid(req.params.id)) {
+//       return res.status(400).json({ error: 'Invalid ID provided.' });
+//     }
+//     const treesId = new ObjectId(req.params.id);
+//     const response = await mongodb.getDatabase().db().collection('trees').deleteOne({ _id: treesId });
+//     if (response.deletedCount > 0) {
+//       res.status(204).send();
+//     } else {
+//       res.status(500).json(response.error || 'Some error occurred while deleting the trees.');
+//     }
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: err.message || 'Failed to delete tree.' });
+//   }
+// };
 
 module.exports = {
   getAll,
