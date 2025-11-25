@@ -53,11 +53,7 @@
               }
             }
           }
-        ],
-        "responses": {
-          "204": { "description": "No Content" },
-          "500": { "description": "Internal Server Error" }
-        }
+        ]
       }
     },
     "/trees/{id}": {
@@ -94,10 +90,7 @@
               }
             }
           }
-        ],
-        "responses": {
-          "200": { "description": "OK" }
-        }
+        ]
       },
       "delete": {
         "tags": ["Delete Tree"],
@@ -139,10 +132,7 @@
               }
             }
           }
-        ],
-        "responses": {
-          "200": { "description": "OK" }
-        }
+        ]
       }
     },
     "/shrubs/{id}": {
@@ -179,20 +169,14 @@
               }
             }
           }
-        ],
-        "responses": {
-          "200": { "description": "OK" }
-        }
+        ]
       },
       "delete": {
         "tags": ["Delete Shrub"],
         "description": "",
         "parameters": [
           { "name": "id", "in": "path", "required": true, "type": "string" }
-        ],
-        "responses": {
-          "200": { "description": "OK" }
-        }
+        ]
       }
     }
   }
