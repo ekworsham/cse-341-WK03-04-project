@@ -41,15 +41,15 @@
             "schema": {
               "type": "object",
               "properties": {
-                "plantName": { "type": "" },
-                "family": { "type": "" },
-                "genus": { "type": "" },
-                "species": { "type": "" },
-                "cultivar": { "type": "" },
-                "hardinessZone": { "type": "" },
-                "flower": { "type": "" },
-                "leaf": { "type": "" },
-                "growthHabit": { "type": "" }
+                "plantName": { "type": "string" },
+                "family": { "type": "string" },
+                "genus": { "type": "string" },
+                "species": { "type": "string" },
+                "cultivar": { "type": "string" },
+                "hardinessZone": { "type": "string" },
+                "flower": { "type": "string" },
+                "leaf": { "type": "string" },
+                "growthHabit": { "type": "string" }
               }
             }
           }
@@ -82,15 +82,15 @@
             "schema": {
               "type": "object",
               "properties": {
-                "plantName": { "type": "" },
-                "family": { "type": "" },
-                "genus": { "type": "" },
-                "species": { "type": "" },
-                "cultivar": { "type": "" },
-                "hardinessZone": { "type": "" },
-                "flower": { "type": "" },
-                "leaf": { "type": "" },
-                "growthHabit": { "type": "" }
+                "plantName": { "type": "string" },
+                "family": { "type": "string" },
+                "genus": { "type": "string" },
+                "species": { "type": "string" },
+                "cultivar": { "type": "string" },
+                "hardinessZone": { "type": "string" },
+                "flower": { "type": "string" },
+                "leaf": { "type": "string" },
+                "growthHabit": { "type": "string" }
               }
             }
           }
@@ -127,15 +127,15 @@
             "schema": {
               "type": "object",
               "properties": {
-                "plantName": { "type": "" },
-                "family": { "type": "" },
-                "genus": { "type": "" },
-                "species": { "type": "" },
-                "cultivar": { "type": "" },
-                "hardinessZone": { "type": "" },
-                "flower": { "type": "" },
-                "leaf": { "type": "" },
-                "growthHabit": { "type": "" }
+               "plantName": { "type": "string" },
+                "family": { "type": "string" },
+                "genus": { "type": "string" },
+                "species": { "type": "string" },
+                "cultivar": { "type": "string" },
+                "hardinessZone": { "type": "string" },
+                "flower": { "type": "string" },
+                "leaf": { "type": "string" },
+                "growthHabit": { "type": "string" }
               }
             }
           }
@@ -167,15 +167,15 @@
             "schema": {
               "type": "object",
               "properties": {
-                "plantName": { "type": "" },
-                "family": { "type": "" },
-                "genus": { "type": "" },
-                "species": { "type": "" },
-                "cultivar": { "type": "" },
-                "hardinessZone": { "type": "" },
-                "flower": { "type": "" },
-                "leaf": { "type": "" },
-                "growthHabit": { "type": "" }
+                "plantName": { "type": "string" },
+                "family": { "type": "string" },
+                "genus": { "type": "string" },
+                "species": { "type": "string" },
+                "cultivar": { "type": "string" },
+                "hardinessZone": { "type": "string" },
+                "flower": { "type": "string" },
+                "leaf": { "type": "string" },
+                "growthHabit": { "type": "string" }
               }
             }
           }
