@@ -53,7 +53,11 @@
               }
             }
           }
-        ]
+        ],
+        "responses": {
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
+        }
       }
     },
     "/trees/{id}": {
@@ -90,7 +94,11 @@
               }
             }
           }
-        ]
+        ],
+        "responses": {
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
+        }
       },
       "delete": {
         "tags": ["Delete Tree"],
@@ -99,7 +107,8 @@
           { "name": "id", "in": "path", "required": true, "type": "string" }
         ],
         "responses": {
-          "200": { "description": "OK" }
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
         }
       }
     },
@@ -120,7 +129,7 @@
             "schema": {
               "type": "object",
               "properties": {
-               "plantName": { "type": "string" },
+                "plantName": { "type": "string" },
                 "family": { "type": "string" },
                 "genus": { "type": "string" },
                 "species": { "type": "string" },
@@ -132,7 +141,11 @@
               }
             }
           }
-        ]
+        ],
+        "responses": {
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
+        }
       }
     },
     "/shrubs/{id}": {
@@ -169,14 +182,22 @@
               }
             }
           }
-        ]
+        ],
+        "responses": {
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
+        }
       },
       "delete": {
         "tags": ["Delete Shrub"],
         "description": "",
         "parameters": [
           { "name": "id", "in": "path", "required": true, "type": "string" }
-        ]
+        ],
+        "responses": {
+          "204": { "description": "No Content" },
+          "500": { "description": "Internal Server Error" }
+        }
       }
     }
   }
