@@ -43,21 +43,44 @@ const getAll = async (req, res) => {
   }
 };
 
+
 const getSingle = async (req, res) => {
   //#swagger.tags = ['Trees']
   try {
     if (!ObjectId.isValid(req.params.id)) {
       return res.status(400).json({ error: 'Invalid ID provided.' });
     }
+
     const treesId = new ObjectId(req.params.id);
     const tree = await mongodb.getDatabase().db().collection('trees').findOne({ _id: treesId });
+
+    if (!tree) {
+      return res.status(404).json({ error: 'Tree not found.' });
+    }
+
     res.setHeader('Content-Type', 'application/json');
-    res.status(200).json(tree);
+    return res.status(200).json(tree);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: err.message || 'Failed to get the tree.' });
+    return res.status(500).json({ error: err.message || 'Failed to get the tree.' });
   }
 };
+
+// const getSingle = async (req, res) => {
+//   //#swagger.tags = ['Trees']
+//   try {
+//     if (!ObjectId.isValid(req.params.id)) {
+//       return res.status(400).json({ error: 'Invalid ID provided.' });
+//     }
+//     const treesId = new ObjectId(req.params.id);
+//     const tree = await mongodb.getDatabase().db().collection('trees').findOne({ _id: treesId });
+//     res.setHeader('Content-Type', 'application/json');
+//     res.status(200).json(tree);
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: err.message || 'Failed to get the tree.' });
+//   }
+// };
 
 const createTrees = async (req, res) => {
   //#swagger.tags = ['Trees']
