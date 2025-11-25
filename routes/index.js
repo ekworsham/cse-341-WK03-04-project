@@ -10,9 +10,7 @@ router.get('/login', passport.authenticate('github'), (req, res) => {});
 router.get('/logout', function(req, res, next) {
   req.logout(function(err) {
     if (err) { return next(err); }
-    //******************
-    // UPDATED CODE
-    // ***************** */
+  
     // Remove custom session store and destroy session
     if (req.session) {
       req.session.destroy(function(err) {
@@ -30,12 +28,5 @@ router.get('/logout', function(req, res, next) {
     }
   });
 });
-
-    //******************
-    // ORIGINGAL CODE
-    // ***************** */
-    //res.redirect('/');
-  //});
-//});  
 
 module.exports = router;
