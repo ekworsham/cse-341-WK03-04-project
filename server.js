@@ -66,9 +66,6 @@ app.get('/', (req, res) => {
   res.send(user ? `logged in as ${user.displayName}` : 'Logged Out');
 });
 
-//*****************
-// NEWCODE
-// ***************** */
 app.get('/github/callback', passport.authenticate('github', {
   failureRedirect: '/api-docs' // leave session defaults so passport.create session works
 }),
@@ -77,16 +74,7 @@ app.get('/github/callback', passport.authenticate('github', {
   // req.session.user = req.user;  — Passport will set req.user for future requests.
   res.redirect('/');
 });
-//*****************
-// ORIGINAL CODE
-// ***************** */
-// app.get('/github/callback', passport.authenticate('github', {
-//   failureRedirect: '/api-docs', session: false
-//   }),
-//   (req, res) => {
-//   req.session.user = req.user;
-//   res.redirect('/');
-// });
+
 
 mongodb.initDb((err) => {
   if (err) {
