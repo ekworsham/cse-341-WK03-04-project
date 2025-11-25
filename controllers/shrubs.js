@@ -130,21 +130,57 @@ const updateShrubs= async (req, res) => {
 const deleteShrubs = async (req, res) => {
   //#swagger.tags = ['Shrubs']
   try {
+    // Validate ObjectId format
     if (!ObjectId.isValid(req.params.id)) {
       return res.status(400).json({ error: 'Invalid ID provided.' });
     }
+
     const shrubsId = new ObjectId(req.params.id);
     const response = await mongodb.getDatabase().db().collection('shrubs').deleteOne({ _id: shrubsId });
-    if (response.deletedCount > 0) {
-      res.status(204).send();
-    } else {
-      res.status(500).json(response.error || 'Some error occurred while deleting the shrubs.');
+
+    // If the delete operation wasn't acknowledged by the server, treat it as a server error
+    if (!response || response.acknowledged === false) {
+      console.error('Delete not acknowledged:', response);
+      return res.status(500).json({ error: 'Database did not acknowledge delete request.' });
     }
+
+    // No document matched the id => treat as "not valid" input (400) per your requirement.
+    if (response.deletedCount === 0) {
+      return res.status(400).json({ error: 'No document found with the provided ID.' });
+    }
+
+    // Successful deletion
+    return res.status(200).send();
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: err.message || 'Failed to delete shrub.' });
+    return res.status(500).json({ error: err.message || 'Failed to delete shrub.' });
   }
 };
+
+
+
+
+
+
+
+// const deleteShrubs = async (req, res) => {
+//   //#swagger.tags = ['Shrubs']
+//   try {
+//     if (!ObjectId.isValid(req.params.id)) {
+//       return res.status(400).json({ error: 'Invalid ID provided.' });
+//     }
+//     const shrubsId = new ObjectId(req.params.id);
+//     const response = await mongodb.getDatabase().db().collection('shrubs').deleteOne({ _id: shrubsId });
+//     if (response.deletedCount > 0) {
+//       res.status(204).send();
+//     } else {
+//       res.status(500).json(response.error || 'Some error occurred while deleting the shrubs.');
+//     }
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ error: err.message || 'Failed to delete shrub.' });
+//   }
+// };
 
 module.exports = {
   getAll,

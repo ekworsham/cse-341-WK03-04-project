@@ -80,7 +80,7 @@ const createTrees = async (req, res) => {
     };
     const response = await mongodb.getDatabase().db().collection('trees').insertOne(trees);
     if (response.acknowledged) {
-      res.status(204).send();
+      res.status(200).send();
     } else {
       res.status(500).json(response.error || 'Some error occurred while creating the tree.');
     }
@@ -119,7 +119,7 @@ const updateTrees= async (req, res) => {
       .collection('trees')
       .updateOne({ _id: treesId }, { $set: trees });
     if (response.modifiedCount > 0) {
-      res.status(204).send();
+      res.status(200).send();
     } else {
       res.status(500).json(response.error || 'Some error occurred while updating the trees.');
     }
@@ -156,20 +156,12 @@ const deleteTrees = async (req, res) => {
     }
 
     // Successful deletion
-    return res.status(204).send();
+    return res.status(200).send();
   } catch (err) {
     console.error(err);
     return res.status(500).json({ error: err.message || 'Failed to delete tree.' });
   }
 };
-
-
-
-
-
-
-
-
 
 // const deleteTrees = async (req, res) => {
 //   //#swagger.tags = ['Trees']
